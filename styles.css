@@ -1,0 +1,281 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #d0e8f2;
+    color: #333;
+}
+
+.weather-app {
+    display: flex;
+}
+
+.sidebar {
+    width: 60px;
+    background-color: #87CEEB; 
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.sidebar li {
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.sidebar .selected {
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.city-search {
+    width: 80%; 
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 12px; 
+    margin: 5px auto;
+    display: block;
+    outline: none;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.current-weather {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('weather_background.png'); 
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 20px;
+    height: 200px; 
+}
+
+.temperature-bubble {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border-radius: 50%;
+    opacity: 0.9;
+    z-index: 10; 
+}
+
+.temperature-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.temperature-circle {
+    background-color: rgba(255, 255, 255, 0.9); 
+    border-radius: 50%;
+    width: 125px;
+    height: 125px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px; 
+}
+
+.temp-bubble {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 50%;
+    opacity: 0.9;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 5px 0; 
+    color: #333;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.temp-bubble-container {
+    position: absolute;
+    display: flex;
+    gap: 20px; 
+    align-items: center;
+    justify-content: center;
+    top: 80px; 
+    z-index: 5; 
+}
+
+.temperature {
+    font-size: 48px; 
+    font-weight: bold;
+    color: #333; 
+}
+
+.condition {
+    background-color: #00BFFF;
+    border-radius: 10px;
+    padding: 5px 10px;
+    margin-top: 10px;
+    color: white;
+    font-weight: bold;
+}
+
+.temperature-range {
+    position: absolute;
+    display: flex;
+    flex-direction: column; /* Stacks the high and low temp bubbles */
+    align-items: center;
+    justify-content: center;
+    bottom: -20px; /* Adjusts the position just below the main temperature bubble */
+}
+
+.high_td {
+    border: 2px solid #FF4500; /* Optional: adds a border to the high temp bubble */
+}
+
+.low_td {
+    border: 2px solid #1E90FF; /* Optional: adds a border to the low temp bubble */
+}
+
+.hourly-forecast, .weekly-forecast {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #B0E0E6; /* Pale blue background */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.hourly-items, .weekly-items {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    justify-content: space-between;
+}
+
+.hour-item, .day-item {
+    text-align: center;
+    padding: 10px;
+    background-color: #e0f7fa; /* Light box background */
+    border-radius: 5px;
+    width: 80px; /* Increased width for forecast boxes */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.hour-item .icon,
+.day-item .icon {
+    font-size: 36px; /* Adjust size as needed */
+    margin-bottom: 5px; /* Adds some space below the icons */
+}
+
+.widgets {
+    margin-top: 20px;
+}
+
+.widget-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Creates two columns of equal width */
+    gap: 10px; /* Space between the widgets */
+}
+
+.widget-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: #e0f7fa; /* Light blue box */
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.large-number {
+    font-size: 24px; /* Makes the numerical values larger */
+    font-weight: bold; /* Makes the numbers bold */
+    margin-bottom: 5px; /* Adds space below the number */
+    display: block; /* Ensures each large number is on its own line */
+    text-align: center; /* Centers the numbers horizontally */
+}
+
+.widget-item div {
+    text-align: center; /* Centers the text below the numbers */
+}
+
+.widget-item h3 {
+    text-align: center; /* Centers the header text */
+    font-size: 18px; /* Ensures uniform font size */
+    font-weight: bold; /* Makes the headers bold */
+    margin-bottom: 10px; /* Adds some space below the headers */
+    color: #333; /* Same color for all headers */
+}
+
+.widgets-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Adjusts space between title and controls */
+    margin-bottom: 10px;
+}
+
+.widget-search-bar {
+    width: 120px; /* Matches the width of the city search bar */
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 12px; /* Smaller font size to match sidebar search */
+    outline: none;
+    margin-right: 5px; /* Adds space between search bar and settings icon */
+}
+
+.settings-icon {
+    cursor: pointer;
+}
+
+.outfit-options {
+    display: flex;
+    justify-content: space-around; /* Distributes space evenly between outfit options */
+    align-items: center;
+    width: 100%;
+}
+
+.outfit-option {
+    display: flex;
+    flex-direction: column; /* Stack emoji and label vertically */
+    align-items: center;
+    text-align: center;
+}
+
+.outfit-emoji {
+    font-size: 32px; /* Makes the emojis larger */
+}
+
+.outfit-label {
+    font-size: 14px; /* Standard size for labels */
+}
