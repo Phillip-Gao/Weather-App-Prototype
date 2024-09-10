@@ -148,24 +148,24 @@ body {
 .temperature-range {
     position: absolute;
     display: flex;
-    flex-direction: column; /* Stacks the high and low temp bubbles */
+    flex-direction: column; 
     align-items: center;
     justify-content: center;
-    bottom: -20px; /* Adjusts the position just below the main temperature bubble */
+    bottom: -20px; 
 }
 
 .high_td {
-    border: 2px solid #FF4500; /* Optional: adds a border to the high temp bubble */
+    border: 2px solid #FF4500; 
 }
 
 .low_td {
-    border: 2px solid #1E90FF; /* Optional: adds a border to the low temp bubble */
+    border: 2px solid #1E90FF; 
 }
 
 .hourly-forecast, .weekly-forecast {
     margin-bottom: 20px;
     padding: 10px;
-    background-color: #B0E0E6; /* Pale blue background */
+    background-color: #B0E0E6; 
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -180,9 +180,9 @@ body {
 .hour-item, .day-item {
     text-align: center;
     padding: 10px;
-    background-color: #e0f7fa; /* Light box background */
+    background-color: #e0f7fa; 
     border-radius: 5px;
-    width: 80px; /* Increased width for forecast boxes */
+    width: 80px; 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -191,8 +191,8 @@ body {
 
 .hour-item .icon,
 .day-item .icon {
-    font-size: 36px; /* Adjust size as needed */
-    margin-bottom: 5px; /* Adds some space below the icons */
+    font-size: 36px; 
+    margin-bottom: 5px; 
 }
 
 .widgets {
@@ -201,8 +201,8 @@ body {
 
 .widget-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Creates two columns of equal width */
-    gap: 10px; /* Space between the widgets */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
 }
 
 .widget-item {
@@ -211,47 +211,47 @@ body {
     justify-content: center;
     align-items: center;
     padding: 10px;
-    background-color: #e0f7fa; /* Light blue box */
+    background-color: #e0f7fa; 
     border-radius: 5px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
 .large-number {
-    font-size: 24px; /* Makes the numerical values larger */
-    font-weight: bold; /* Makes the numbers bold */
-    margin-bottom: 5px; /* Adds space below the number */
-    display: block; /* Ensures each large number is on its own line */
-    text-align: center; /* Centers the numbers horizontally */
+    font-size: 24px; 
+    font-weight: bold; 
+    margin-bottom: 5px; 
+    display: block; 
+    text-align: center; 
 }
 
 .widget-item div {
-    text-align: center; /* Centers the text below the numbers */
+    text-align: center; 
 }
 
 .widget-item h3 {
-    text-align: center; /* Centers the header text */
-    font-size: 18px; /* Ensures uniform font size */
-    font-weight: bold; /* Makes the headers bold */
-    margin-bottom: 10px; /* Adds some space below the headers */
-    color: #333; /* Same color for all headers */
+    text-align: center; 
+    font-size: 18px; 
+    font-weight: bold; 
+    margin-bottom: 10px; 
+    color: #333; 
 }
 
 .widgets-header {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Adjusts space between title and controls */
+    justify-content: space-between; 
     margin-bottom: 10px;
 }
 
 .widget-search-bar {
-    width: 120px; /* Matches the width of the city search bar */
+    width: 120px; 
     padding: 5px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 12px; /* Smaller font size to match sidebar search */
+    font-size: 12px;
     outline: none;
-    margin-right: 5px; /* Adds space between search bar and settings icon */
+    margin-right: 5px; 
 }
 
 .settings-icon {
@@ -260,22 +260,22 @@ body {
 
 .outfit-options {
     display: flex;
-    justify-content: space-around; /* Distributes space evenly between outfit options */
+    justify-content: space-around; 
     align-items: center;
     width: 100%;
 }
 
 .outfit-option {
     display: flex;
-    flex-direction: column; /* Stack emoji and label vertically */
+    flex-direction: column; 
     align-items: center;
     text-align: center;
 }
 
 .outfit-emoji {
-    font-size: 32px; /* Makes the emojis larger */
+    font-size: 32px; 
 }
 
 .outfit-label {
-    font-size: 14px; /* Standard size for labels */
+    font-size: 14px;
 }
